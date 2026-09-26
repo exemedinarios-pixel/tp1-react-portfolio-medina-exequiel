@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #121212; /* Fondo oscuro principal */
+  color: #e0e0e0; /* Texto gris claro para que no canse la vista */
+  line-height: 1.6;
+}
+
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Tarjetas más oscuras con bordes redondeados y sombra */
+section, header, footer {
+  background: #1e1e1e;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  border: 1px solid #333;
+}
+
+h1, h2, h3 {
+  color: #ffffff; /* Títulos en blanco puro para resaltar */
+  margin-bottom: 10px;
+}
+
+/* Enlaces del Header */
+a {
+  color: #4da6ff; /* Azul brillante para los links */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Botón estilizado */
+button {
+  background-color: #4da6ff;
+  color: #121212;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3388dd;
+}
+
+/* Acomodar la foto y el texto del Hero lado a lado */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Darle forma circular a la foto */
+.foto-perfil {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%; /* Esto hace que la foto sea un círculo perfecto */
+  object-fit: cover; /* Evita que la foto se estire o deforme */
+  border: 3px solid #4da6ff; /* Un borde azul que combine con los botones */
+}
+
+/* Hacer que en celulares la foto quede arriba y el texto abajo */
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
